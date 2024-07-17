@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  app:
+    image: your-image-name:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: fx-deals-analyzer
+    volumes:
+      - ./logs:/app/logs  # Example volume mount; adjust as needed
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
