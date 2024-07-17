@@ -1,4 +1,4 @@
-# Java FX Deals Analyzer
+# Java Maven FX Deals Assignment
 
 ## Overview
 
