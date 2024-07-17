@@ -2,7 +2,8 @@
 
 ## Overview
 
-This project is a Java application designed to analyze FX deals using MongoDB. The application is packaged in a Docker container for ease of deployment and development.
+This project is a Java application designed to submit FX deals using MongoDB. The application is packaged in a Docker container for ease of deployment and development.
+the project was developed as a console application prompting the user in each step and data input
 
 ## Project Structure
 
@@ -16,6 +17,7 @@ This project is a Java application designed to analyze FX deals using MongoDB. T
 
 ## Getting Started
 
+
 ### Prerequisites
 
 - [Java JDK 17](https://www.oracle.com/java/technologies/javase-jdk17-downloads.html)
@@ -25,15 +27,19 @@ This project is a Java application designed to analyze FX deals using MongoDB. T
 
 ### Build the Application
 
-1. Clone the repository:
+
+1.  Clone the repository:
     ```bash
-    git clone <repository-url>
-    cd <repository-directory>
+    git clone https://github.com/FadousMohannad/FXDeals.git
     ```
 
 2. Build the project using Maven:
     ```bash
     mvn clean package
+    ```
+3. Use command to run the app
+    ```bash
+    mvn clean compile exec:java  .
     ```
 
    This will generate a JAR file in the `target` directory.
@@ -44,7 +50,7 @@ This project is a Java application designed to analyze FX deals using MongoDB. T
 
 1. Build the Docker image:
     ```bash
-    docker build -t fx-deals-analyzer .
+    docker build -t fx-deals .
     ```
 
 2. Run the Docker container:
@@ -79,20 +85,17 @@ This project is a Java application designed to analyze FX deals using MongoDB. T
 
 ## Configuration
 
-- **MongoDB**: Update the MongoDB connection string in the application properties or environment variables.
+- **MongoDB**:
+  - a connection string is set from my mongo atlas account in the code
+  - change connection string using your own connection string from mongo atlas if you wanted to navigate test the database and browse collections
+  - connection string example 
+    ```bash
+    mongodb+srv://mohannedfds:MEX9h88XeINUVvaZ@cluster0.nuvuyxn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+    ```
 
 ## Deployment
 
 To deploy the Docker container to a production environment, you may need to customize the `Dockerfile` and `docker-compose.yml` with specific configurations or environment settings.
 
-## Documentation
 
-For detailed documentation on the application's features and usage, refer to the `docs` directory (if applicable) or other provided documentation files.
 
-## Contributing
-
-Feel free to contribute by submitting issues, feature requests, or pull requests. Follow the project's contribution guidelines and code of conduct.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
